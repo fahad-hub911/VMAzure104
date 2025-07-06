@@ -1,0 +1,69 @@
+{
+    "name": "appvm02",
+    "id": "/subscriptions/60bcf7ab-6bd0-456f-8709-6d54a792d1bf/resourceGroups/appvm01_group/providers/Microsoft.Compute/virtualMachines/appvm02",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "uksouth",
+    "properties": {
+        "hardwareProfile": {
+            "vmSize": "Standard_B1s"
+        },
+        "provisioningState": "Succeeded",
+        "vmId": "4f93b45f-8c21-4724-b3ce-97a89a1f84d8",
+        "additionalCapabilities": {
+            "hibernationEnabled": false
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "RedHat",
+                "offer": "RHEL",
+                "sku": "94_gen2",
+                "version": "latest",
+                "exactVersion": "9.4.2025040316"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "appvm02_OsDisk_1_0748a5a992d64306b6766d7059e233e7",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "storageAccountType": "Premium_LRS",
+                    "id": "/subscriptions/60bcf7ab-6bd0-456f-8709-6d54a792d1bf/resourceGroups/appvm01_group/providers/Microsoft.Compute/disks/appvm02_OsDisk_1_0748a5a992d64306b6766d7059e233e7"
+                },
+                "deleteOption": "Delete",
+                "diskSizeGB": 64
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "appvm02",
+            "adminUsername": "appvm02",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": false,
+                "provisionVMAgent": true,
+                "patchSettings": {
+                    "patchMode": "ImageDefault",
+                    "assessmentMode": "ImageDefault"
+                }
+            },
+            "secrets": [],
+            "allowExtensionOperations": true,
+            "requireGuestProvisionSignal": true
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/60bcf7ab-6bd0-456f-8709-6d54a792d1bf/resourceGroups/appvm01_group/providers/Microsoft.Network/networkInterfaces/appvm029",
+                    "properties": {
+                        "deleteOption": "Detach"
+                    }
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        }
+    },
+    "apiVersion": "2021-03-01"
+}
